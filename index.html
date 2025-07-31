@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -20,7 +20,9 @@
       max-width: 500px;
       margin: 40px auto;
       padding: 40px 20px;
-      background-color: #1a1a1a;
+      background-image: url('fondo.jpg');
+      background-size: cover;
+      background-position: center;
       border-radius: 16px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
       animation: fadeIn 0.8s ease-in;
@@ -63,29 +65,31 @@
       height: 100px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #ffd700;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+      border: 3px solid #25d366;
+      box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
       margin-bottom: 15px;
     }
 
     .contact-name {
-      font-weight: 700;
-      font-size: 1.3em;
+      font-weight: 800;
+      font-size: 1.5em;
       color: #ffd700;
-      margin-top: 10px;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+      margin-top: 12px;
     }
 
     .contact-desc {
-      font-size: 0.95em;
-      color: #ccc;
+      font-size: 1.1em;
+      color: #ffffff;
+      font-weight: 500;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
       margin: 4px 0;
-      font-weight: 700;
     }
 
     .cta-button {
       background: linear-gradient(90deg, #25d366, #128c7e);
       color: white;
-      padding: 15px 25px;
+      padding: 20px 35px;
       border: none;
       border-radius: 10px;
       font-size: 1em;
@@ -105,8 +109,7 @@
     }
 
     @keyframes heartbeat {
-      0%,
-      100% {
+      0%, 100% {
         transform: scale(1);
       }
       50% {
@@ -179,109 +182,6 @@
         transform: translateY(0);
       }
     }
-
-    /* MODAL ESTILOS */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(4px);
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .modal-content {
-      background-color: #2a2a2a;
-      color: white;
-      padding: 25px 30px;
-      border-radius: 12px;
-      max-width: 400px;
-      text-align: center;
-      box-shadow: 0 0 20px #25d366aa;
-    }
-
-    .modal-content h3 {
-      margin-top: 0;
-      font-size: 1.5em;
-      margin-bottom: 15px;
-      color: #ffd700;
-    }
-
-    .modal-content p {
-      font-size: 1em;
-      line-height: 1.4em;
-      margin-bottom: 25px;
-    }
-
-    .modal-buttons {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    .continue-btn,
-    .cancel-btn {
-      cursor: pointer;
-      border: none;
-      padding: 12px 22px;
-      font-size: 1em;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-
-    .continue-btn {
-      background-color: #25d366;
-      color: white;
-      box-shadow: 0 0 12px #25d366bb;
-    }
-
-    .continue-btn:hover {
-      background-color: #1ebe5d;
-    }
-
-    .cancel-btn {
-      background-color: #444;
-      color: #ddd;
-      box-shadow: 0 0 12px #222;
-    }
-
-    .cancel-btn:hover {
-      background-color: #555;
-    }
-
-    @media (max-width: 400px) {
-      .cta-button {
-        font-size: 0.95em;
-        padding: 14px 20px;
-      }
-
-      .container {
-        padding: 25px 15px;
-      }
-
-      .testimonial {
-        font-size: 0.85em;
-      }
-
-      .modal-content {
-        max-width: 90%;
-        padding: 20px 15px;
-      }
-
-      .modal-buttons {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
   </style>
 
   <!-- Facebook Pixel -->
@@ -303,29 +203,21 @@
   </noscript>
 
   <script>
-    const whatsappNumber = "1171758526";
-
-    function openModal() {
-      document.getElementById('modal').style.display = 'flex';
-    }
-
-    function closeModal() {
-      document.getElementById('modal').style.display = 'none';
-    }
+    const whatsappNumber = "3518063118";
 
     function goToWhatsApp() {
       fbq('track', 'Contact');
-      window.location.href = `https://wa.me/${whatsappNumber}?text=Hola!%20Vi%20este%20anuncio,%20quiero%20más%20info%20por%20favor!%20mi%20nombre%20es:`;
+      window.location.href = `https://wa.me/${whatsappNumber}?text=Hola!%20quiero%20un%20usuario!%20mi%20nombre%20es:`;
     }
 
     const testimonios = [
-      'Romina.S: "GANEE!! me dieron un gran bono💰. Recomendado!”',
-      'Juan pablo.T: "Muy profesional, confiable. Siempre jugando con ellos 👑”',
-      'Susana.D: "Saque $70.000 me hacian mucha falta 🙌. Increíble.”',
-      'Diego.A: "Gané $500.000 recien jugando al joker cash 😱🔥"',
-      'Camila.R: "Recargué $2.000 y me dieron el DOBLE de bono💰💰"',
-      'Luis.F: "Pensé que era fake, pero ya cobré dos veces. Gracias 🙌"',
-      'Emilia.B: "jugue por primera vez, me ayudaron en todo👌"',
+      'Romina.S: "GANEE!! me dieron un buen bono💰. Recomendado!” ⭐⭐⭐⭐⭐',
+      'Juan pablo.T: "Muy profesional, confiable. Siempre jugando con ellos 👑” ⭐⭐⭐⭐⭐',
+      'Susana.D: "Saque $70.000 me hacian mucha falta 🙌. Increíble.” ⭐⭐⭐⭐⭐',
+      'Diego.A: "Gané $500.000 recien jugando al joker cash 😱🔥" ⭐⭐⭐⭐⭐',
+      'Camila.R: "Recargué $2.000 y me dieron el DOBLE de bono💰💰" ⭐⭐⭐⭐',
+      'Luis.F: "100% confiable! ya cobré dos veces. Gracias 🙌" ⭐⭐⭐⭐',
+      'Emilia.B: "jugue por primera vez, me ayudaron en todo👌" ⭐⭐⭐⭐⭐',
     ];
 
     let current = 0;
@@ -351,12 +243,12 @@
 </head>
 <body>
   <div class="container">
-    <div class="header" onclick="openModal()">
+    <div class="header" onclick="goToWhatsApp()">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
       <span>WhatsApp</span>
     </div>
 
-    <a href="javascript:void(0);" onclick="openModal()">
+    <a href="javascript:void(0);" onclick="goToWhatsApp()">
       <img src="perfil-vip.png" alt="Perfil" class="profile-pic" />
     </a>
 
@@ -364,37 +256,19 @@
     <div class="contact-desc">Bono de bienvenida (CON CARGA)</div>
     <div class="contact-desc">Carga mínima: $2000</div>
 
-    <a class="cta-button" href="javascript:void(0);" onclick="openModal()">¡PEDIR MI USUARIO AHORA!</a>
+    <a class="cta-button" href="javascript:void(0);" onclick="goToWhatsApp()">¡PEDIR MI USUARIO AHORA!</a>
 
     <div class="footer-links">
-      <p><a href="javascript:void(0);" onclick="openModal()">¿Aún no tienes WhatsApp? Descargar</a></p>
+      <p><a href="javascript:void(0);" onclick="goToWhatsApp()">¿Aún no tienes WhatsApp? Descargar</a></p>
       <p>
-        <a href="javascript:void(0);" onclick="openModal()">Términos y condiciones</a> | <a href="javascript:void(0);" onclick="openModal()">Política
+        <a href="javascript:void(0);" onclick="goToWhatsApp()">Términos y condiciones</a> | <a href="javascript:void(0);" onclick="goToWhatsApp()">Política
           de privacidad</a>
       </p>
     </div>
 
-    <div class="testimonials" onclick="openModal()">
-      <div class="testimonial" id="testimonial-text">
-        <!-- Se actualiza con JS -->
-      </div>
+    <div class="testimonials" onclick="goToWhatsApp()">
+      <div class="testimonial" id="testimonial-text"></div>
       <div class="progress-bar" id="progress-bar"></div>
-    </div>
-  </div>
-
-  <!-- MODAL -->
-  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
-    <div class="modal-content">
-      <h3 id="modalTitle">⚠️ IMPORTANTE ⚠️</h3>
-      <p id="modalDesc">
-        NO se entregan fichas gratis sin carga.<br />
-        La carga mínima para acceder al bono es de <strong>$2000</strong>.<br />
-        ¿Deseás continuar con tu pedido?
-      </p>
-      <div class="modal-buttons">
-        <button class="continue-btn" onclick="goToWhatsApp()">Sí, deseo cargar y recibir el bono</button>
-        <button class="cancel-btn" onclick="closeModal()">Cancelar</button>
-      </div>
     </div>
   </div>
 </body>
